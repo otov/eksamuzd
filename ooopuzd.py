@@ -5,12 +5,12 @@ class darbinieks:
         self.stundas=stundas
         self.alga=alga
     
-veids=input(int("Ievadiet darbinieka veidu (Ofisa darbinieks=1 Rūpnīcas darbinieks=2): "))
-vards=input(str("Ievadiet darbinieka vārdu: "))
-stundas=input(int("Ievadiet darba stundas: "))
-alga=input(int("Ievadiet darbinieka stundas algu: "))
+veids=input("Ievadiet darbinieka veidu (Ofisa darbinieks=1 Rūpnīcas darbinieks=2): ")
+vards=input("Ievadiet darbinieka vārdu: ")
+stundas=int(input("Ievadiet darba stundas: "))
+alga=int(input("Ievadiet darbinieka stundas algu: "))
 
-if veids==1:
+if veids=="1":
     class ofisadarbinieks(darbinieks):
         def __init__(self, vards, stundas, alga):
             super().__init__(vards,stundas,alga)
@@ -28,7 +28,7 @@ if veids==1:
         print("Ofisa darbinieka neto alga: ",arkopalga)
 
 
-elif veids==2:
+elif veids=="2":
     class rupnicasdarbinieks(darbinieks):
         def __init__(self, vards, stundas, alga):
             super().__init__(vards,stundas,alga)
@@ -46,10 +46,19 @@ elif veids==2:
 
             print("Rūpnīcas darbinieka vārds: ",vards)
             print("Rūpnīcas darbinieka nostrādātās stundas: ",stundas)
-            print("Rūpnīcas darbinieka ")
+            print("Rūpnīcas darbinieka bruto alga: ", bezkopalga2)
+            print("Rūpnīcas darbinieka bruto alga: ", arkopalga2)
+
 
         elif nakts== "Nē" or "Ne" or "nē" or "ne":
+            bezkopalga2=stundas*alga
+            arkopalga2=bezkopalga2*likme
             
+            print("Rūpnīcas darbinieka vārds: ",vards)
+            print("Rūpnīcas darbinieka nostrādātās stundas: ",stundas)
+            print("Rūpnīcas darbinieka bruto alga: ", bezkopalga2)
+            print("Rūpnīcas darbinieka bruto alga: ", arkopalga2)
+
         else:
             print("Ievadīta nederīga vērtība")
             
