@@ -49,7 +49,7 @@ elif veids==2:
             print("Rūpnīcas darbinieka ")
 
         elif nakts== "Nē" or "Ne" or "nē" or "ne":
-
+            
         else:
             print("Ievadīta nederīga vērtība")
             
